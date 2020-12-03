@@ -1,0 +1,32 @@
+<html>
+<body>
+
+<script src="//code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+<script>
+$.ajax({
+    type: "post",
+    url: "https://script.google.com/macros/s/AKfycbyueBfXAidU1jfaCOdVIcYHOmHH9hXEwML8-Smz5cZ_n0vH42WX/exec", //個人表單
+        data: {
+                "order_time": "1111",
+                "order_no": "2222",
+                "order_pay": "5555",
+                "order_name": "7777",
+                "order_phone":"7777",
+                "order_email":"8888",
+                "order_address":"9999",
+                "order_invoice":"454545",
+                "order_ps":""
+        },
+        success: function(response) {
+          if(response == "成功"){
+             alert("成功");
+           }
+         }
+    });
+
+</script>
+
+</body>
+</html>
+

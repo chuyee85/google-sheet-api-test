@@ -1,0 +1,29 @@
+function doPost(e) {
+  //設定參數
+  var params = e.parameter; 
+  var time = params.order_time;
+  var no = params.order_no;
+  var pay = params.order_pay;
+  var name = params.order_name;
+  var phone = params.order_phone;
+  var email = params.order_email;
+  var address = params.order_address;
+  var invoice = params.order_invoice;
+  var ps = params.order_ps;
+  //設定sheet
+  var SpreadSheet = SpreadsheetApp.openById("136DfKPv9xmH_s56H_J9BF2VixdIuigQNtJ4cfAKoRTQ");
+  var Sheet = SpreadSheet.getSheetByName("工作表1");
+  var LastRow = Sheet.getLastRow();
+  //資料寫入
+  Sheet.getRange(LastRow+1, 1).setValue(time);
+  Sheet.getRange(LastRow+1, 2).setValue(no);
+  Sheet.getRange(LastRow+1, 3).setValue(pay);
+  Sheet.getRange(LastRow+1, 4).setValue(name);
+  Sheet.getRange(LastRow+1, 5).setValue(phone);
+  Sheet.getRange(LastRow+1, 6).setValue(email);
+  Sheet.getRange(LastRow+1, 7).setValue(address);
+  Sheet.getRange(LastRow+1, 8).setValue(invoice);
+  Sheet.getRange(LastRow+1, 9).setValue(ps);
+  
+  return ContentService.createTextOutput("成功");
+}
