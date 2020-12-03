@@ -11,7 +11,7 @@ function doPost(e) {
   var invoice = params.order_invoice;
   var ps = params.order_ps;
   //設定sheet
-  var SpreadSheet = SpreadsheetApp.openById("136DfKPv9xmH_s56H_J9BF2VixdIuigQNtJ4cfAKoRTQ");
+  var SpreadSheet = SpreadsheetApp.openById("自己的ID");
   var Sheet = SpreadSheet.getSheetByName("工作表1");
   var LastRow = Sheet.getLastRow();
   //資料寫入
